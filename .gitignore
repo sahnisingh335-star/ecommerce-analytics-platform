@@ -2,12 +2,19 @@
 __pycache__/
 *.pyc
 
+# Secrets - never commit
 .env
+.env.*
+!.env.example
 
 data/raw/*.csv
 data/raw/*.xlsx
 
 .ipynb_checkpoints/
+
+# Power BI / Office temp files
+~$*
+*.pbix.bak
 
 .DS_Store
 Thumbs.db

@@ -1,0 +1,61 @@
+category_name,reason,return_count,refund_value
+Accessories,Wrong Product,96,955808.58
+Accessories,Quality Issue,96,986914.08
+Accessories,Size Issue,91,980979.8
+Accessories,Late Delivery,89,840733.88
+Accessories,Damaged,83,923089.52
+Accessories,Changed Mind,83,973960.37
+Beauty,Size Issue,118,1183595.41
+Beauty,Late Delivery,106,1066845.64
+Beauty,Damaged,102,1080213.32
+Beauty,Wrong Product,99,1004693.72
+Beauty,Quality Issue,99,979843.51
+Beauty,Changed Mind,96,856511.78
+Books,Damaged,95,1051986.26
+Books,Wrong Product,91,901170.06
+Books,Quality Issue,83,811703.19
+Books,Late Delivery,83,838713.35
+Books,Size Issue,83,864893.49
+Books,Changed Mind,74,748198.6
+Electronics,Changed Mind,97,890065.96
+Electronics,Wrong Product,87,872965.76
+Electronics,Late Delivery,86,876517.48
+Electronics,Damaged,85,765642.36
+Electronics,Quality Issue,78,784826.46
+Electronics,Size Issue,68,630549.7
+Fashion,Changed Mind,115,1065715.57
+Fashion,Wrong Product,110,1098430.28
+Fashion,Damaged,108,1070778.74
+Fashion,Quality Issue,96,1000673.15
+Fashion,Size Issue,90,852176.61
+Fashion,Late Delivery,85,866688.22
+Footwear,Late Delivery,129,1318803.63
+Footwear,Size Issue,128,1494752.26
+Footwear,Quality Issue,127,1172239.87
+Footwear,Wrong Product,101,1122940.43
+Footwear,Damaged,96,965274.0
+Footwear,Changed Mind,91,919211.9
+Grocery,Damaged,98,993679.95
+Grocery,Changed Mind,92,882024.23
+Grocery,Size Issue,86,981097.93
+Grocery,Wrong Product,85,887337.87
+Grocery,Late Delivery,83,819066.68
+Grocery,Quality Issue,77,821803.03
+Home & Kitchen,Damaged,93,909466.59
+Home & Kitchen,Size Issue,85,757734.25
+Home & Kitchen,Late Delivery,78,721032.78
+Home & Kitchen,Changed Mind,77,836120.68
+Home & Kitchen,Wrong Product,70,770151.36
+Home & Kitchen,Quality Issue,65,626021.0
+Sports,Changed Mind,122,1270751.25
+Sports,Late Delivery,110,1072910.85
+Sports,Quality Issue,106,1087835.67
+Sports,Damaged,90,930857.22
+Sports,Size Issue,88,985107.74
+Sports,Wrong Product,86,928679.56
+Toys,Quality Issue,118,1185744.98
+Toys,Wrong Product,97,1011379.13
+Toys,Late Delivery,91,946823.55
+Toys,Size Issue,90,923163.68
+Toys,Changed Mind,85,904330.11
+Toys,Damaged,74,707549.8

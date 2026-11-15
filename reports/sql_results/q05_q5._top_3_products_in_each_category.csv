@@ -1,0 +1,31 @@
+category_name,product_id,product_name,revenue,rank_in_category
+Accessories,826,Classic Nova Product 826,7403167.62,1
+Accessories,93,Advanced GlowCare Product 93,6216121.04,2
+Accessories,847,Professional FitLife Product 847,6133699.43,3
+Beauty,486,Smart GlowCare Product 486,7180687.72,1
+Beauty,537,Ultra FreshMart Product 537,6940038.96,2
+Beauty,434,Ultra NextGen Product 434,6707218.03,3
+Books,489,Premium FreshMart Product 489,6765106.69,1
+Books,719,Advanced KidZone Product 719,6566100.80,2
+Books,896,Essential NextGen Product 896,6542632.85,3
+Electronics,646,Classic NextGen Product 646,7812925.32,1
+Electronics,202,Smart DailyNeeds Product 202,7569458.86,2
+Electronics,972,Ultra Nova Product 972,7355011.12,3
+Fashion,506,Smart PrimeChoice Product 506,7124922.96,1
+Fashion,214,Ultra PrimeChoice Product 214,7085815.70,2
+Fashion,80,Essential PrimeChoice Product 80,7026503.75,3
+Footwear,791,Smart TechPro Product 791,6864123.36,1
+Footwear,887,Smart FitLife Product 887,6863369.31,2
+Footwear,170,Classic DailyNeeds Product 170,6644945.85,3
+Grocery,213,Advanced TechPro Product 213,7429766.01,1
+Grocery,568,Essential Nova Product 568,7064398.16,2
+Grocery,864,Basic FreshMart Product 864,6814276.65,3
+Home & Kitchen,577,Advanced NextGen Product 577,7820956.36,1
+Home & Kitchen,608,Premium UrbanStyle Product 608,6755332.39,2
+Home & Kitchen,315,Essential FitLife Product 315,6521140.38,3
+Sports,980,Professional TechPro Product 980,8172369.96,1
+Sports,762,Classic UrbanStyle Product 762,6907519.09,2
+Sports,454,Advanced TechPro Product 454,6428320.04,3
+Toys,57,Essential GlowCare Product 57,8693417.86,1
+Toys,648,Basic FreshMart Product 648,8679169.81,2
+Toys,941,Advanced HomeMax Product 941,8322280.52,3

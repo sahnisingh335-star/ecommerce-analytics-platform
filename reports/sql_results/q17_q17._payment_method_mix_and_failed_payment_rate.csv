@@ -1,0 +1,7 @@
+method,total_payments,failed_payments,failed_payment_rate_pct,total_payment_amount
+Wallet,8408,1428,16.98,802738771.71
+Net Banking,8381,1357,16.19,798307358.68
+Credit Card,8335,1391,16.69,790096987.98
+Debit Card,8334,1420,17.04,806420252.75
+UPI,8273,1366,16.51,789163606.64
+Cash on Delivery,8269,1398,16.91,783631945.97

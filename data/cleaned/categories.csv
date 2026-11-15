@@ -1,0 +1,11 @@
+category_id,category_name,parent_category
+1,Electronics,Technology
+2,Fashion,Lifestyle
+3,Home & Kitchen,Home
+4,Beauty,Lifestyle
+5,Sports,Lifestyle
+6,Books,Education
+7,Grocery,Food
+8,Toys,Kids
+9,Accessories,Fashion
+10,Footwear,Fashion

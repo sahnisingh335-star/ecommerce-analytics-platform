@@ -1,9 +1,13 @@
 pandas
 numpy
 matplotlib
+seaborn
+scikit-learn
 openpyxl
 jupyter
+faker
 sqlalchemy
 psycopg2-binary
 python-dotenv
 statsmodels
+resend
