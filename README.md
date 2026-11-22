@@ -2,7 +2,9 @@
 
 An end-to-end data analytics project that turns raw e-commerce data into
 business insights: data generation → validation → cleaning → PostgreSQL
-(Supabase) → SQL analysis → advanced analytics → Power BI.
+(Supabase) → SQL analysis → advanced analytics → interactive dashboard.
+
+🔗 **Live Dashboard:** https://sahnisingh335-star.github.io/ecommerce-analytics-platform/dashboard.html
 
 > All data is synthetic (generated with Python and Faker). No real customer data is used.
 
@@ -40,6 +42,14 @@ Full details: [`reports/sql_insights.md`](reports/sql_insights.md)
 
 20 SQL questions answer these in [`sql/analysis/business_questions.sql`](sql/analysis/business_questions.sql).
 
+## 📊 Interactive Dashboard
+
+An interactive HTML dashboard built with Chart.js and hosted on GitHub Pages.
+It has KPI cards, filters and charts for revenue trends, categories, regions,
+discounts and customer segments.
+
+Open it here: [Live Dashboard](https://sahnisingh335-star.github.io/ecommerce-analytics-platform/dashboard.html)
+
 ## 🗂️ Data
 
 | Table | Rows |
@@ -60,19 +70,20 @@ Cleaning rules are documented in [`docs/cleaning_plan.md`](docs/cleaning_plan.md
 ## 🛠️ Tech Stack
 
 Python (pandas, NumPy, statsmodels, Faker) · SQL / PostgreSQL (Supabase) ·
-SQLAlchemy · Power BI · Git & GitHub
+SQLAlchemy · Chart.js · HTML/CSS/JavaScript · GitHub Pages · Git & GitHub
 
 ## 📁 Project Structure
 
 ```text
+├── dashboard.html      # interactive dashboard (GitHub Pages)
 ├── data/
 │   ├── raw/            # generated data (not committed)
 │   └── cleaned/        # cleaned data
 ├── docs/               # charter, data model, dataset spec, cleaning plan
 ├── notebooks/          # exploratory data analysis
 ├── powerbi/
-│   ├── data/           # Power BI-ready star schema + analytics tables
-│   └── README.md       # dashboard build guide (relationships, DAX)
+│   ├── data/           # dashboard-ready star schema + analytics tables
+│   └── README.md       # data model guide (relationships, DAX measures)
 ├── reports/
 │   ├── sql_results/    # 20 SQL query outputs
 │   ├── sql_insights.md # SQL insights report
@@ -116,7 +127,7 @@ python src\prepare_powerbi_data.py
 - [x] Supabase PostgreSQL database
 - [x] 20 SQL business questions and insights report
 - [x] RFM, cohort retention, time series, anomaly detection
-- [x] Power BI-ready data model
-- [ ] Power BI dashboard
+- [x] Dashboard-ready data model
+- [x] Interactive HTML dashboard (Chart.js, GitHub Pages)
 - [ ] AI business insights
 - [ ] Email alerts (Resend) and GitHub Actions automation
