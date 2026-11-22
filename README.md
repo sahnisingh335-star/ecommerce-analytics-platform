@@ -2,7 +2,7 @@
 
 An end-to-end data analytics project that turns raw e-commerce data into
 business insights: data generation → validation → cleaning → PostgreSQL
-(Supabase) → SQL analysis → advanced analytics → interactive dashboard.
+(Supabase) → SQL analysis → advanced analytics → interactive dashboard → automated insights.
 
 🔗 **Live Dashboard:** https://sahnisingh335-star.github.io/ecommerce-analytics-platform/dashboard.html
 
@@ -50,6 +50,15 @@ discounts and customer segments.
 
 Open it here: [Live Dashboard](https://sahnisingh335-star.github.io/ecommerce-analytics-platform/dashboard.html)
 
+## 🤖 Automated Business Insights
+
+`src/ai_insights.py` reads the analytics result files and writes a plain-English
+report with 6 findings and a recommended action for each (revenue trend,
+discounts, low-margin categories, customer segments, anomalies, payments and returns).
+
+- Output: [`reports/ai_insights.md`](reports/ai_insights.md)
+- Rule-based (no API key needed). Next upgrade: connect an LLM for richer summaries.
+
 ## 🗂️ Data
 
 | Table | Rows |
@@ -87,6 +96,7 @@ SQLAlchemy · Chart.js · HTML/CSS/JavaScript · GitHub Pages · Git & GitHub
 ├── reports/
 │   ├── sql_results/    # 20 SQL query outputs
 │   ├── sql_insights.md # SQL insights report
+│   ├── ai_insights.md  # automated business insights
 │   └── *.csv           # RFM, cohort, monthly trends, anomalies
 ├── sql/analysis/       # business_questions.sql
 └── src/
@@ -97,6 +107,7 @@ SQLAlchemy · Chart.js · HTML/CSS/JavaScript · GitHub Pages · Git & GitHub
     ├── run_sql_analysis.py
     ├── generate_sql_insights.py
     ├── prepare_powerbi_data.py
+    ├── ai_insights.py
     └── analytics/      # rfm, cohort, time_series, anomaly_detection
 ```
 
@@ -118,6 +129,7 @@ python src\analytics\anomaly_detection.py
 python src\analytics\rfm.py
 python src\analytics\cohort.py
 python src\prepare_powerbi_data.py
+python src\ai_insights.py
 ```
 
 ## ✅ Status
@@ -129,5 +141,5 @@ python src\prepare_powerbi_data.py
 - [x] RFM, cohort retention, time series, anomaly detection
 - [x] Dashboard-ready data model
 - [x] Interactive HTML dashboard (Chart.js, GitHub Pages)
-- [ ] AI business insights
+- [x] Automated business insights (rule-based)
 - [ ] Email alerts (Resend) and GitHub Actions automation
