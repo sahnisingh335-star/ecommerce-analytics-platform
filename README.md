@@ -4,8 +4,7 @@ An end-to-end data analytics project that turns raw e-commerce data into
 business insights: data generation → validation → cleaning → PostgreSQL
 (Supabase) → SQL analysis → advanced analytics → interactive dashboard → automated insights.
 
-🔗 **Live Dashboard:** https://sahnisingh335-star.github.io/ecommerce-analytics-platform/dashboard.html
-
+🔗 **Live Dashboard:**https://sahnisingh335-star.github.io/ecommerce-analytics-platform/dashboard.html
 > All data is synthetic (generated with Python and Faker). No real customer data is used.
 
 ## 📌 Key Results (Jan 2024 – Sep 2026)
