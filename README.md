@@ -2,9 +2,11 @@
 
 An end-to-end data analytics project that turns raw e-commerce data into
 business insights: data generation → validation → cleaning → PostgreSQL
-(Supabase) → SQL analysis → advanced analytics → interactive dashboard → automated insights.
+(Supabase) → SQL analysis → advanced analytics → interactive dashboard →
+automated insights, forecasting and weekly email reports.
 
-🔗 **Live Dashboard:**https://sahnisingh335-star.github.io/ecommerce-analytics-platform/dashboard.html
+🔗 **Live Dashboard:** https://sahnisingh335-star.github.io/ecommerce-analytics-platform/dashboard.html
+
 > All data is synthetic (generated with Python and Faker). No real customer data is used.
 
 ## 📌 Key Results (Jan 2024 – Sep 2026)
@@ -17,6 +19,7 @@ business insights: data generation → validation → cleaning → PostgreSQL
 | Repeat purchase rate | 88.06% |
 | Revenue from top 10% of customers | 23.56% |
 | Top brand by revenue | GlowCare (9.88%) |
+| Forecast backtest error (MAPE) | 2.9% |
 
 - **Discounts hurt margin:** the 1–10% discount band earns about 34% profit margin,
   while orders above 30% discount earn only about 7%.
@@ -58,6 +61,25 @@ discounts, low-margin categories, customer segments, anomalies, payments and ret
 - Output: [`reports/ai_insights.md`](reports/ai_insights.md)
 - Rule-based (no API key needed). Next upgrade: connect an LLM for richer summaries.
 
+## 📈 Sales Forecasting
+
+`src/analytics/forecast.py` predicts revenue for the next 3 months. It tests three
+simple models (moving average, linear trend, Holt smoothing) on the last 6 known
+months and uses the one with the lowest error. The best model was a linear trend
+with a 2.9% backtest error (MAPE). Revenue has been stable, so the forecast is
+about ₹9.7 Cr per month.
+
+- Output: [`reports/sales_forecast.csv`](reports/sales_forecast.csv) (forecast with an 80% range)
+
+## 📧 Weekly Email Report
+
+A GitHub Actions workflow ([`.github/workflows/weekly_report.yml`](.github/workflows/weekly_report.yml))
+runs every Monday at 8:30 AM IST. It rebuilds the insights and forecast, then
+`src/send_email_alert.py` emails the report using Resend.
+
+Setup: add `RESEND_API_KEY` and `ALERT_EMAIL_TO` under
+Settings → Secrets and variables → Actions. Without a key the script prints a preview.
+
 ## 🗂️ Data
 
 | Table | Rows |
@@ -78,12 +100,14 @@ Cleaning rules are documented in [`docs/cleaning_plan.md`](docs/cleaning_plan.md
 ## 🛠️ Tech Stack
 
 Python (pandas, NumPy, statsmodels, Faker) · SQL / PostgreSQL (Supabase) ·
-SQLAlchemy · Chart.js · HTML/CSS/JavaScript · GitHub Pages · Git & GitHub
+SQLAlchemy · Chart.js · HTML/CSS/JavaScript · GitHub Pages · GitHub Actions ·
+Resend · Git & GitHub
 
 ## 📁 Project Structure
 
 ```text
 ├── dashboard.html      # interactive dashboard (GitHub Pages)
+├── .github/workflows/  # weekly_report.yml (scheduled email report)
 ├── data/
 │   ├── raw/            # generated data (not committed)
 │   └── cleaned/        # cleaned data
@@ -96,6 +120,7 @@ SQLAlchemy · Chart.js · HTML/CSS/JavaScript · GitHub Pages · Git & GitHub
 │   ├── sql_results/    # 20 SQL query outputs
 │   ├── sql_insights.md # SQL insights report
 │   ├── ai_insights.md  # automated business insights
+│   ├── sales_forecast.csv
 │   └── *.csv           # RFM, cohort, monthly trends, anomalies
 ├── sql/analysis/       # business_questions.sql
 └── src/
@@ -107,7 +132,8 @@ SQLAlchemy · Chart.js · HTML/CSS/JavaScript · GitHub Pages · Git & GitHub
     ├── generate_sql_insights.py
     ├── prepare_powerbi_data.py
     ├── ai_insights.py
-    └── analytics/      # rfm, cohort, time_series, anomaly_detection
+    ├── send_email_alert.py
+    └── analytics/      # rfm, cohort, time_series, anomaly_detection, forecast
 ```
 
 ## ▶️ How to Run
@@ -127,8 +153,10 @@ python src\analytics\time_series.py
 python src\analytics\anomaly_detection.py
 python src\analytics\rfm.py
 python src\analytics\cohort.py
+python src\analytics\forecast.py
 python src\prepare_powerbi_data.py
 python src\ai_insights.py
+python src\send_email_alert.py   # preview mode unless RESEND_API_KEY is set
 ```
 
 ## ✅ Status
@@ -141,4 +169,5 @@ python src\ai_insights.py
 - [x] Dashboard-ready data model
 - [x] Interactive HTML dashboard (Chart.js, GitHub Pages)
 - [x] Automated business insights (rule-based)
-- [ ] Email alerts (Resend) and GitHub Actions automation
+- [x] Sales forecasting (3-month, backtested)
+- [x] Weekly email report (Resend + GitHub Actions)
