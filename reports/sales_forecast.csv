@@ -1,0 +1,4 @@
+month,forecast_revenue,lower_80,upper_80,model,backtest_mape_pct
+2026-10,97011292.0,93434734.0,100587850.0,Linear trend,2.9
+2026-11,97020385.0,93443827.0,100596944.0,Linear trend,2.9
+2026-12,97029479.0,93452921.0,100606037.0,Linear trend,2.9
